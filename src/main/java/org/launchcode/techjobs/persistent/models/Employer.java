@@ -4,12 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Employer extends AbstractEntity {
 
+    @Size(min= 3, max  = 50)
     @NotNull
     private String location;
 
