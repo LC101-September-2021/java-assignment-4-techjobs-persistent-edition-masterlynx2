@@ -6,7 +6,7 @@ select name from employer where location = "St. Louis City";
 DROP TABLE job;
 
 -- Part 4: Test it with SQL
-         SELECT FROM skill
-                LEFT INNER JOIn job_skills (skill.id=job_skills.skills_id|job_skills.skills_id =skill.id)
-                WHERE job_skills.jobs_id IS NOT NULL
-                ORDER BY name ASC;
+        Select * from skill
+        inner join job_skills on skill.id = job_skills.skills_id
+        where job_skills.job_id is not null
+        order by name asc;
